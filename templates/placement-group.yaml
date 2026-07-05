@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Spread Placement Group
+
+Resources:
+
+  PlacementGroup:
+    Type: AWS::EC2::PlacementGroup
+    Properties:
+      Strategy: spread
+
+Outputs:
+
+  PlacementGroupName:
+    Value: !Ref PlacementGroup
+    Export:
+      Name: PlacementGroupName
